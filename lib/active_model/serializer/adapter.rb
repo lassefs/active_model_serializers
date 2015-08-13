@@ -91,7 +91,8 @@ module ActiveModel
       end
 
       def include_meta(json)
-        json[meta_key] = meta if meta
+        #json[meta_key] = meta if meta
+        json[:data][meta_key] = meta if meta
         json
       end
     end
